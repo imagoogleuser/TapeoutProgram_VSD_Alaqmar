@@ -123,6 +123,7 @@ make
 **Verification:**
 A snapshot showing the successful completion of the `make test` command, which validates the entire flow.
 
-*(Drag and drop your screenshot of the `make test` results here)*
+![Openlane](https://github.com/user-attachments/assets/2154fb21-0c34-498b-9331-75a9828d9599)
+
 
 ---
