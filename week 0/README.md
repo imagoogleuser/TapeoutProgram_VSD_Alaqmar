@@ -44,7 +44,8 @@ sudo make install
 **Verification:**
 A screenshot confirming the successful installation by checking the tool's version.
 
-*(Drag and drop your screenshot of the `yosys --version` command here)*
+![Yosys](https://github.com/user-attachments/assets/7986d48d-8d84-4d10-ae0f-51e3efa31726)
+
 
 ---
 
@@ -61,9 +62,11 @@ sudo apt-get install gtkwave
 ```
 
 **Verification:**
-A snapshot showing the installed version of Icarus Verilog.
+A snapshot showing the installed version of Icarus Verilog & GTKWave.
 
-*(Drag and drop your screenshot of the `iverilog -V` command here)*
+![iverilog](https://github.com/user-attachments/assets/d12d3bd8-f5e2-4762-ae15-e6b745250dec)
+
+![gtkwave](https://github.com/user-attachments/assets/629e07ed-2d69-44a7-902f-7184bdf4f665)
 
 ---
 
@@ -87,7 +90,7 @@ sudo make install
 **Verification:**
 The terminal output after a successful `make install` process.
 
-*(Drag and drop your screenshot of the final installation message here)*
+![magic](https://github.com/user-attachments/assets/9e39092c-3a59-4606-a6fa-a0db97301d4e)
 
 ---
 
