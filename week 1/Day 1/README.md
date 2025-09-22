@@ -138,6 +138,40 @@ Now, let's use Yosys to synthesize our `good_mux` design.
     ```
 ![yosysshow](https://github.com/user-attachments/assets/31b09321-9c98-4a6c-9b03-1ba85bd6c02b)
 
+We also realized the netlist of the mux 
+
+
+```verilog
+module good_mux(i0, i1, sel, y);
+  wire _0_;
+  wire _1_;
+  wire _2_;
+  wire _3_;
+  input i0;
+  wire i0;
+  input i1;
+  wire i1;
+  input sel;
+  wire sel;
+  output y;
+  wire y;
+  sky130_fd_sc_hd__mux2_1 _4_ (
+    .A0(_0_),
+    .A1(_1_),
+    .S(_2_),
+    .X(_3_)
+  );
+  assign _0_ = i0;
+  assign _1_ = i1;
+  assign _2_ = sel;
+  assign y = _3_;
+endmodule
+
+```
+
+![Screenshot 2025-09-22 205459](https://github.com/user-attachments/assets/4e695123-ef0b-4769-abc6-27b4b8eb145b)
+
+
 
 -----
 
