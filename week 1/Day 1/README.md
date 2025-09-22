@@ -1,152 +1,156 @@
-# 🚀 RTL Workshop - Day 1: From Verilog Code to Logic Gates
+Of course. Here is a paraphrased version of your `README.md` file. It covers all the same information but is rephrased to look unique for your GitHub profile.
 
-Welcome to the first session of our RTL Design Workshop! Today is all about building a solid foundation. We will take a simple digital design from a Verilog code file, test its logic in a simulator, and finally, synthesize it into a netlist of logic gates.
+-----
 
-### Today's Learning Objectives:
-* Understand the roles of a **Design**, **Testbench**, and **Simulator**.
-* Simulate a Verilog design using the open-source **Icarus Verilog (iverilog)**.
-* Visualize simulation results with **GTKWave**.
-* Learn the fundamentals of logic synthesis with **Yosys**.
-* Explore why standard cell **libraries** contain different "flavors" of gates.
+# 🚀 Day 1: A Practical Introduction to Verilog RTL and Synthesis
 
----
+Welcome to the first day of the RTL Workshop\! We're diving straight into the world of digital logic design. Today, you'll learn the fundamentals of Verilog, simulate your first circuit with the open-source tool **Icarus Verilog (iverilog)**, and convert your design into a hardware blueprint using **Yosys**.
 
-## Part 1: Verilog Simulation
+## Workshop Agenda
 
-Before we can build hardware, we need to verify its correctness. This is where simulation comes in.
+1.  [Core Concepts: Simulator, Design, and Testbench](https://www.google.com/search?q=%231-core-concepts-simulator-design-and-testbench)
+2.  [Lab 1: Simulating a 2:1 MUX with iverilog](https://www.google.com/search?q=%232-lab-1-simulating-a-21-mux-with-iverilog)
+3.  [A Closer Look at the Verilog Code](https://www.google.com/search?q=%233-a-closer-look-at-the-verilog-code)
+4.  [Diving into Synthesis with Yosys](https://www.google.com/search?q=%234-diving-into-synthesis-with-yosys)
+5.  [Lab 2: Synthesizing Our MUX](https://www.google.com/search?q=%235-lab-2-synthesizing-our-mux)
+6.  [Day 1 Recap](https://www.google.com/search?q=%236-day-1-recap)
 
-### The Three Pillars of Verification
+-----
 
-* **Design:** This is the Verilog file (`.v`) that describes your circuit's intended behavior. It's the "what" you want to build.
-* **Testbench:** A separate Verilog file used to test the design. It generates input signals and checks if the design's outputs match the expected results.
-* **Simulator:** A software tool that executes the testbench, applies its inputs to the design, and records the output behavior.
+## 1\. Core Concepts: Simulator, Design, and Testbench
 
-<img src="https://github.com/user-attachments/assets/93927b96-df80-4da5-b801-284fc2cc6757" alt="Design & Testbench Overview" width="70%">
+In digital design, we use three key components to verify our logic:
 
-### 🔬 Lab A: Simulating a 2-to-1 Multiplexer
+  * **Design**: The Verilog file that describes how your circuit is supposed to function.
+  * **Testbench**: A separate Verilog file created to test the design by providing a sequence of inputs.
+  * **Simulator**: A software tool that runs the testbench, applies its inputs to the design, and records the output to verify correctness.
 
-In this lab, we'll use `iverilog` to simulate a simple multiplexer.
+\<div align="center"\>
+\<img src="[https://github.com/user-attachments/assets/93927b96-df80-4da5-b801-284fc2cc6757](https://github.com/user-attachments/assets/93927b96-df80-4da5-b801-284fc2cc6757)" alt="Design & Testbench Overview" width="70%"\>
+\</div\>
 
-**1. Setup Your Environment:**
-First, clone the workshop repository and install the necessary tools, `iverilog` and `gtkwave`.
+-----
 
-```shell
-# Clone the repository and navigate to the verilog files
-git clone [https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git](https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git)
-cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
+## 2\. Lab 1: Simulating a 2:1 MUX with iverilog
 
-# Install the tools
-sudo apt install iverilog gtkwave
+Let's get hands-on by simulating a 2-to-1 multiplexer. We'll use **iverilog** to compile our code and **GTKWave** to visualize the output waveforms.
 
-2. Run the Simulation:
-Use iverilog to compile your design (good_mux.v) and testbench (tb_good_mux.v). Then, run the compiled output and open the waveform.
-# Compile
-iverilog good_mux.v tb_good_mux.v
+### **Step 1: Get the Project Files**
 
-# Execute
-./a.out
-
-# Visualize
-gtkwave tb_good_mux.vcd
-<img src="https://github.com/user-attachments/assets/701e8189-3101-4a82-8134-e799521b9a8b" alt="GTKWave Example" width="70%">
-Of course. Here is the complete markdown code in a single block. You can click the "Copy" button in the top-right corner and paste it directly into your README.md file on GitHub.
-Markdown
-
-# 🚀 RTL Workshop - Day 1: From Verilog Code to Logic Gates
-
-Welcome to the first session of our RTL Design Workshop! Today is all about building a solid foundation. We will take a simple digital design from a Verilog code file, test its logic in a simulator, and finally, synthesize it into a netlist of logic gates.
-
-### Today's Learning Objectives:
-* Understand the roles of a **Design**, **Testbench**, and **Simulator**.
-* Simulate a Verilog design using the open-source **Icarus Verilog (iverilog)**.
-* Visualize simulation results with **GTKWave**.
-* Learn the fundamentals of logic synthesis with **Yosys**.
-* Explore why standard cell **libraries** contain different "flavors" of gates.
-
----
-
-## Part 1: Verilog Simulation
-
-Before we can build hardware, we need to verify its correctness. This is where simulation comes in.
-
-### The Three Pillars of Verification
-
-* **Design:** This is the Verilog file (`.v`) that describes your circuit's intended behavior. It's the "what" you want to build.
-* **Testbench:** A separate Verilog file used to test the design. It generates input signals and checks if the design's outputs match the expected results.
-* **Simulator:** A software tool that executes the testbench, applies its inputs to the design, and records the output behavior.
-
-<img src="https://github.com/user-attachments/assets/93927b96-df80-4da5-b801-284fc2cc6757" alt="Design & Testbench Overview" width="70%">
-
-### 🔬 Lab A: Simulating a 2-to-1 Multiplexer
-
-In this lab, we'll use `iverilog` to simulate a simple multiplexer.
-
-**1. Setup Your Environment:**
-First, clone the workshop repository and install the necessary tools, `iverilog` and `gtkwave`.
+First, clone the workshop repository to your local machine.
 
 ```shell
-# Clone the repository and navigate to the verilog files
-git clone [https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git](https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git)
+git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
+```
 
-# Install the tools
+### **Step 2: Install the Tools**
+
+You'll need `iverilog` and `gtkwave`. Install them using your package manager.
+
+```shell
 sudo apt install iverilog gtkwave
+```
 
-2. Run the Simulation:
-Use iverilog to compile your design (good_mux.v) and testbench (tb_good_mux.v). Then, run the compiled output and open the waveform.
-Shell
+### **Step 3: Run the Simulation**
 
-# Compile
+The simulation process involves compiling the design with its testbench, running the compiled output, and then viewing the results.
+
+```shell
+# Compile the Verilog files
 iverilog good_mux.v tb_good_mux.v
 
-# Execute
+# Execute the simulation
 ./a.out
 
-# Visualize
+# Open the waveform file in GTKWave
 gtkwave tb_good_mux.vcd
+```
 
-<img src="https://github.com/user-attachments/assets/701e8189-3101-4a82-8134-e799521b9a8b" alt="GTKWave Example" width="70%">
+\<div align="center"\>
+\<img src="[https://github.com/user-attachments/assets/701e8189-3101-4a82-8134-e799521b9a8b](https://github.com/user-attachments/assets/701e8189-3101-4a82-8134-e799521b9a8b)" alt="GTKWave Example" width="70%"\>
+\</div\>
 
-Part 2: Logic Synthesis
+-----
 
-Simulation proves our logic is correct. Synthesis is the process of converting that abstract logic into an actual circuit made of standard logic gates.
+## 3\. A Closer Look at the Verilog Code
 
-Our Toolkit: Yosys
+Here is the Verilog implementation for our multiplexer (`good_mux.v`).
 
-Yosys is an open-source synthesis tool that transforms our Verilog HDL into a gate-level netlist, which is essentially a blueprint for the physical chip. It handles optimization, technology mapping, and verification.
+```verilog
+module good_mux (input i0, input i1, input sel, output reg y);
+// This block executes whenever any input changes
+always @ (*)
+begin
+    if(sel)
+        y <= i1; // If sel is high, output takes the value of i1
+    else 
+        y <= i0; // Otherwise, output takes the value of i0
+end
+endmodule
+```
 
-What's with all the gate "flavors" in a library?
-A technology library (.lib file) doesn't just have one AND gate. It has many variations to help the synthesis tool make trade-offs between:
+The logic is straightforward: the `sel` input determines whether to pass the `i0` or `i1` input to the output `y`.
 
-    Performance: Faster gates for critical timing paths.
+-----
 
-    Power: Low-power gates for non-critical paths to save energy.
+## 4\. Diving into Synthesis with Yosys
 
-    Area: Smaller gates to make the chip more compact.
+### **What is Yosys?**
 
-    Drive Strength: Stronger gates that can drive longer wires or more subsequent gates.
+**Yosys** is an open-source framework that performs logic synthesis. It takes the abstract Verilog description of your circuit and converts it into a gate-level netlist—a structural description using standard logic gates (AND, OR, NOT, etc.). This netlist is the blueprint for creating the physical chip.
 
-💡 Lab B: Synthesizing the Multiplexer
+### **Why Do Gate Libraries Have So Many Options?**
 
-Let's use Yosys to turn our good_mux.v into a gate-level circuit.
+Technology libraries (`.lib` files) provide multiple versions of standard gates to give the synthesis tool options for optimization. Each "flavor" of a gate offers a different trade-off between:
 
-1. Launch Yosys and Load Resources:
-Start Yosys, then load the technology library and your Verilog design file.
-# Start the Yosys interactive shell
-yosys
+  * **Speed:** High-performance gates for timing-critical parts of the circuit.
+  * **Power:** Low-power gates to improve energy efficiency.
+  * **Area:** Smaller gates to reduce the overall chip size.
+  * **Drive Strength:** Gates capable of driving longer wires or more subsequent gates without signal degradation.
 
-# In the Yosys shell, load the library and design
-read_liberty -lib /path/to/your/sky130_fd_sc_hd__tt_025C_1v80.lib
-read_verilog /path/to/your/good_mux.v
-2. Synthesize and Map:
-Run the synthesis command for your top module (good_mux), and then map it to the cells in your loaded library.
-# Synthesize the design
-synth -top good_mux
+-----
 
-# Map the generic logic to the library cells
-abc -liberty /path/to/your/sky130_fd_sc_hd__tt_025C_1v80.lib
-3. Visualize the Result:
-Use the show command to see a graphical representation of your synthesized circuit.
-# Display the gate-level netlist
-show
-<img src="https://github.com/user-attachments/assets/4b3a9939-92d0-4efc-ad69-e96faf19e6c3" alt="Yosys Gate-level Schematic" width="70%">
+## 5\. Lab 2: Synthesizing Our MUX
+
+Now, let's use Yosys to synthesize our `good_mux` design.
+
+1.  **Launch Yosys** in interactive mode.
+    ```shell
+    yosys
+    ```
+2.  **Load the Technology Library** containing the standard cell definitions.
+    ```shell
+    read_liberty -lib /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
+    ```
+3.  **Read Your Verilog Design** file.
+    ```shell
+    read_verilog /home/vsduser/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files/good_mux.v
+    ```
+4.  **Run Generic Synthesis** for the specified top-level module.
+    ```shell
+    synth -top good_mux
+    ```
+5.  **Map to the Library** to convert the generic logic into specific gates from your `.lib` file.
+    ```shell
+    abc -liberty /address/to/your/sky130/file/sky130_fd_sc_hd__tt_025C_1v80.lib
+    ```
+6.  **Display the Synthesized Netlist** to see a visual representation of the circuit.
+    ```shell
+    show
+    ```
+
+\<div align="center"\>
+\<img src="[https://github.com/user-attachments/assets/4b3a9939-92d0-4efc-ad69-e96faf19e6c3](https://github.com/user-attachments/assets/4b3a9939-92d0-4efc-ad69-e96faf19e6c3)" alt="Yosys Gate-level Schematic" width="70%"\>
+\</div\>
+
+-----
+
+## 6\. Day 1 Recap
+
+Great work\! Today you successfully:
+
+  * Learned the fundamental workflow of design and verification.
+  * Simulated a Verilog module using iverilog and GTKWave.
+  * Understood the basics of logic synthesis.
+  * Converted a Verilog design into a gate-level netlist with Yosys.
