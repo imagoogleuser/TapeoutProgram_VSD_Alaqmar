@@ -136,10 +136,8 @@ Now, let's use Yosys to synthesize our `good_mux` design.
     ```shell
     show
     ```
+![yosysshow](https://github.com/user-attachments/assets/31b09321-9c98-4a6c-9b03-1ba85bd6c02b)
 
-\<div align="center"\>
-\<img src="[https://github.com/user-attachments/assets/4b3a9939-92d0-4efc-ad69-e96faf19e6c3](https://github.com/user-attachments/assets/4b3a9939-92d0-4efc-ad69-e96faf19e6c3)" alt="Yosys Gate-level Schematic" width="70%"\>
-\</div\>
 
 -----
 
