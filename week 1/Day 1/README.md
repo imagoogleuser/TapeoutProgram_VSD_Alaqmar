@@ -24,10 +24,8 @@ In digital design, we use three key components to verify our logic:
   * **Design**: The Verilog file that describes how your circuit is supposed to function.
   * **Testbench**: A separate Verilog file created to test the design by providing a sequence of inputs.
   * **Simulator**: A software tool that runs the testbench, applies its inputs to the design, and records the output to verify correctness.
+<img width="1515" height="852" alt="448241377-93927b96-df80-4da5-b801-284fc2cc6757" src="https://github.com/user-attachments/assets/20c8a133-e143-4efa-bcd2-24e5f9a00337" />
 
-\<div align="center"\>
-\<img src="[https://github.com/user-attachments/assets/93927b96-df80-4da5-b801-284fc2cc6757](https://github.com/user-attachments/assets/93927b96-df80-4da5-b801-284fc2cc6757)" alt="Design & Testbench Overview" width="70%"\>
-\</div\>
 
 -----
 
@@ -66,10 +64,9 @@ iverilog good_mux.v tb_good_mux.v
 # Open the waveform file in GTKWave
 gtkwave tb_good_mux.vcd
 ```
+![Screenshot 2025-09-21 124249](https://github.com/user-attachments/assets/65097ac7-c4af-4525-8856-3c2dedb67a84)
 
-\<div align="center"\>
-\<img src="[https://github.com/user-attachments/assets/701e8189-3101-4a82-8134-e799521b9a8b](https://github.com/user-attachments/assets/701e8189-3101-4a82-8134-e799521b9a8b)" alt="GTKWave Example" width="70%"\>
-\</div\>
+
 
 -----
 
