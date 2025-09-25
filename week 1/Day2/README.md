@@ -54,6 +54,10 @@ This method preserves the design's modular structure as defined in your Verilog 
 * **Drawbacks**:
     * Optimizations are confined within module boundaries and cannot occur across them.
 
+Example Image:
+![Hierarchinal](https://github.com/user-attachments/assets/0472a2b3-d7b2-46ab-8c6a-fc272a6d7f9f)
+
+
 ### The Flattened Approach
 
 This approach dissolves all module boundaries, merging the entire design into a single, large netlist before optimization.
@@ -64,6 +68,9 @@ This approach dissolves all module boundaries, merging the entire design into a 
 * **Drawbacks**:
     * Significantly increases synthesis runtime and memory usage.
     * The link to the original RTL structure is lost, making debugging very difficult.
+Example Image:
+
+![flat](https://github.com/user-attachments/assets/240596fd-aabb-4ad6-a0cd-9064bd08eb85)
 
 ### Comparison at a Glance
 
