@@ -228,6 +228,7 @@ endgenerate
 ## 6. What is an RCA (Ripple Carry Adder)?
 
 A **Ripple Carry Adder (RCA)** is a digital circuit for binary addition built by cascading multiple full adder blocks in series. For an `n`-bit addition, `n` full adders are required. The carry-out from each full adder "ripples" to become the carry-in of the next, more significant full adder.
+<img width="886" height="370" alt="image" src="https://github.com/user-attachments/assets/c01c7be6-1eb9-42af-905a-f77a16fbf25b" />
 
 ---
 
@@ -251,6 +252,7 @@ always @(*) begin
 end
 endmodule
 ```
+<img width="1583" height="645" alt="image" src="https://github.com/user-attachments/assets/72c4762c-1812-4787-9d0d-5fcee9199839" />
 
 ### Lab 10: Implementing an 8-to-1 Demux with a Case Statement
 ```verilog
@@ -277,6 +279,7 @@ always @(*) begin
 end
 endmodule
 ```
+<img width="1635" height="635" alt="image" src="https://github.com/user-attachments/assets/bbce5fe0-1a8e-4848-be9c-32528cbc6683" />
 
 ### Lab 11: Implementing an 8-to-1 Demux with a For Loop
 ```verilog
@@ -298,6 +301,8 @@ always @(*) begin
 end
 endmodule
 ```
+<img width="1681" height="695" alt="image" src="https://github.com/user-attachments/assets/bc9ebe6e-f3d1-4d55-8217-1c10ef0a067d" />
+
 
 ### Lab 12: Creating an 8-bit RCA with a Generate Block
 ```verilog
@@ -329,6 +334,7 @@ module fa (input a, input b, input c, output co, output sum);
     assign {co, sum} = a + b + c;
 endmodule
 ```
+<img width="1618" height="776" alt="image" src="https://github.com/user-attachments/assets/f9cb1620-35a4-4697-8067-6ad0f40ac4cf" />
 
 ---
 
