@@ -241,7 +241,7 @@ endmodule
 - This circuit's output `q` is invariably driven to `1`. Both the asynchronous reset condition and the normal clocked behavior assign `q` to be `1`.
 **Simulation**
 <img width="1667" height="606" alt="image" src="https://github.com/user-attachments/assets/019f2143-5c05-4a67-8a07-cc7559cc9db8" />
-**Synthesis**
+** Synthesis **
 <img width="1716" height="775" alt="image" src="https://github.com/user-attachments/assets/2632d4cf-de2e-47ce-935a-f4015e12e742" />
 
 ---
