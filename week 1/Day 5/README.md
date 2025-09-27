@@ -103,6 +103,8 @@ always @(*) begin
 end
 endmodule
 ```
+<img width="1574" height="759" alt="image" src="https://github.com/user-attachments/assets/f161f3aa-2677-40e0-8f97-10908dbded72" />
+
 
 ### Lab 2: Synthesis of Incomplete If Statement
 
@@ -119,6 +121,7 @@ always @(*) begin
 end
 endmodule
 ```
+<img width="1669" height="834" alt="image" src="https://github.com/user-attachments/assets/90fd8185-f7de-4282-ac36-0d4fe6efbe0d" />
 
 ### Lab 4: Synthesis of Incomplete Nested If-Else
 
@@ -136,6 +139,8 @@ always @(*) begin
 end
 endmodule
 ```
+<img width="1511" height="705" alt="image" src="https://github.com/user-attachments/assets/1d8f8e66-61b8-4487-8afb-87c6eda57f16" />
+
 
 ### Lab 6: Synthesis of Complete Case Statement
 
@@ -158,6 +163,7 @@ always @(*) begin
 end
 endmodule
 ```
+<img width="1651" height="655" alt="image" src="https://github.com/user-attachments/assets/299a265f-a140-4570-9315-6ddfc2793640" />
 
 ### Lab 8: Case with Partial Signal Assignments
 ```verilog
@@ -181,7 +187,7 @@ always @(*) begin
 end
 endmodule
 ```
-> **Note:** The synthesis and simulation steps for these labs are detailed in the Day 1 materials.
+<img width="1645" height="681" alt="image" src="https://github.com/user-attachments/assets/947c65aa-08c9-4eae-9435-f7c6a42dd357" />
 
 ---
 
