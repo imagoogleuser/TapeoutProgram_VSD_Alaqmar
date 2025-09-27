@@ -111,6 +111,10 @@ endmodule
 ```
 - **Function:** If `sel` is `1`, `y` is assigned `i1`; otherwise, `y` is assigned `i0`.
 
+**Synthesis**
+<img width="1712" height="822" alt="image" src="https://github.com/user-attachments/assets/54779c58-4dfa-49cf-82e8-7a3d345d4948" />
+
+
 ---
 
 ### Lab 2: Synthesis Using Yosys
