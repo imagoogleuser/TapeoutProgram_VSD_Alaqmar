@@ -89,6 +89,8 @@ To run, follow the synthesis steps from Day 1 and insert this command between `a
 ```shell
 opt_clean -purge
 ```
+<img width="1509" height="768" alt="image" src="https://github.com/user-attachments/assets/1aee19bb-5468-41dd-ac50-f29f1b6bee69" />
+
 
 ---
 
@@ -108,18 +110,32 @@ This module also functions as a 2-to-1 multiplexer.
 - If `a` is false, `y` is driven by the input `b`.
 
 ---
+<img width="1653" height="748" alt="image" src="https://github.com/user-attachments/assets/9bdbdf43-4ef7-4c9c-8c78-b8127dc06df9" />
+
 
 ### Lab 3
 
 Verilog for Lab 3:
 
 ```verilog
-module opt_check2 (input a , input b , output y);
-	assign y = a?1:b;
+module opt_check3 (input a , input b , input c, output y);
+	assign y = a?(c?b:0):0;
 endmodule
 ```
 
-**Functionality:** This is a 2-to-1 MUX where `y` is assigned `1` if selector `a` is true, and takes the value of `b` otherwise.
+**Functionality**: This code describes a logic circuit where inputs a and c act as enable signals.
+
+    If a is false (0), the output y is assigned 0.
+
+    If a is true (1), the logic then checks c:
+
+        If c is also true (1), the output y is assigned the value of b.
+
+        If c is false (0), the output y is assigned 0.
+
+In short, the output y is equal to b only when both a and c are true. Otherwise, y is always zero. This is logically equivalent to a 3-input AND gate: y = a & c & b.
+<img width="1689" height="763" alt="image" src="https://github.com/user-attachments/assets/a4155c25-6ddd-4882-9cc4-90ceeffcc29a" />
+
 
 ---
 
@@ -139,8 +155,10 @@ module opt_check4 (input a , input b , input c , output y);
   - If `a = 1`, the expression becomes `y = (b?(1 & c):c)`, which simplifies to `y = (b?c:c)`, so `y = c`.
   - If `a = 0`, the expression becomes `y = !c`.
 - Therefore, the entire statement is equivalent to `y = a ? c : !c`.
+<img width="1709" height="766" alt="image" src="https://github.com/user-attachments/assets/d446036f-f5f6-4c0c-a163-72ff21c75ed1" />
 
 ---
+
 
 ### Lab 5
 
@@ -162,6 +180,11 @@ endmodule
 - This describes a D-type flip-flop.
 - It features an asynchronous reset that forces the output `q` to `0`.
 - When not in reset, the flip-flop is always loaded with a constant `1` on every positive clock edge.
+**Simulation**
+<img width="1651" height="754" alt="image" src="https://github.com/user-attachments/assets/0e73b052-451d-4588-b141-5e7a1110523a" />
+**Synthesis**
+<img width="1717" height="840" alt="image" src="https://github.com/user-attachments/assets/1c932ac6-b1aa-4504-abc4-56cede41f6e4" />
+
 
 ---
 
@@ -183,6 +206,43 @@ endmodule
 
 **Functionality:**
 - This circuit's output `q` is invariably driven to `1`. Both the asynchronous reset condition and the normal clocked behavior assign `q` to be `1`.
+**Simulation**
+<img width="1701" height="820" alt="image" src="https://github.com/user-attachments/assets/5b828f9d-a5e6-4d4d-861d-5f2f627af053" />
+**Synthesis**
+<img width="1645" height="804" alt="image" src="https://github.com/user-attachments/assets/a0ae4a5a-bdc7-41c1-ad9d-299ffa2bea8d" />
+
+---
+### Lab 7
+
+Verilog for Lab 7:
+
+```verilog
+module dff_const3(input clk, input reset, output reg q);
+reg q1;
+
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+	begin
+		q <= 1'b1;
+		q1 <= 1'b0;
+	end
+	else
+	begin
+		q1 <= 1'b1;
+		q <= q1;
+	end
+end
+
+endmodule
+```
+
+**Functionality:**
+- This circuit's output `q` is invariably driven to `1`. Both the asynchronous reset condition and the normal clocked behavior assign `q` to be `1`.
+**Simulation**
+<img width="1667" height="606" alt="image" src="https://github.com/user-attachments/assets/019f2143-5c05-4a67-8a07-cc7559cc9db8" />
+**Synthesis**
+<img width="1716" height="775" alt="image" src="https://github.com/user-attachments/assets/2632d4cf-de2e-47ce-935a-f4015e12e742" />
 
 ---
 
