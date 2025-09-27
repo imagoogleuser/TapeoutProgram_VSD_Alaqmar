@@ -144,7 +144,6 @@ module bad_mux (input i0, input i1, input sel, output reg y);
   end
 endmodule
 ```
-
 #### What's Wrong?
 - **Incomplete Sensitivity List:** The `always` block's sensitivity list is missing `i0` and `i1`. It should be `@(*)`.
 - **Incorrect Assignment Type:** It uses non-blocking assignments (`<=`) to model combinational logic, which is not recommended and can lead to simulation mismatches.
@@ -158,12 +157,13 @@ always @ (*) begin
     y = i0;
 end
 ```
-
+<img width="1387" height="723" alt="image" src="https://github.com/user-attachments/assets/d2591854-af97-481c-94a5-267919e3740c" />
 ---
 
 ### Lab 5: GLS of Bad MUX
 
 Conduct a gate-level simulation on the `bad_mux` module. Due to the coding issues, you may observe mismatches between its RTL and gate-level behavior.
+<img width="1600" height="806" alt="image" src="https://github.com/user-attachments/assets/9eb7dc92-074e-45c1-a9c7-a952813754bf" />
 
 ---
 
@@ -191,12 +191,20 @@ always @ (*) begin
   d = x & c;
 end
 ```
+Waveform with blocking assignment:
+<img width="1721" height="879" alt="image" src="https://github.com/user-attachments/assets/d402e6ca-351a-4c1f-a385-c3ce6f95e708" />
 
+Waveform after GL:
+<img width="1457" height="698" alt="image" src="https://github.com/user-attachments/assets/03541438-cb71-4728-91dc-d1d2e20023d0" />
+
+As we can clearly see there is a synth-sim mismatch between them due to blocking statement
 ---
 
 ### Lab 7: Synthesis of the Blocking Caveat Module
 
 Synthesize the correctly ordered version of the `blocking_caveat` module to see the resulting logic.
+<img width="1299" height="706" alt="image" src="https://github.com/user-attachments/assets/3b3217df-4655-47ed-a822-84c5c05aba73" />
+
 
 ---
 
