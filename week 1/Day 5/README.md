@@ -107,6 +107,7 @@ endmodule
 
 
 ### Lab 2: Synthesis of Incomplete If Statement
+<img width="1375" height="754" alt="image" src="https://github.com/user-attachments/assets/f3c277b8-8267-4bd5-8a3b-63c02e3e7ddb" />
 
 ---
 
@@ -124,6 +125,7 @@ endmodule
 <img width="1669" height="834" alt="image" src="https://github.com/user-attachments/assets/90fd8185-f7de-4282-ac36-0d4fe6efbe0d" />
 
 ### Lab 4: Synthesis of Incomplete Nested If-Else
+<img width="1451" height="722" alt="image" src="https://github.com/user-attachments/assets/9fdae25d-2de1-4f6f-83cf-5e563ebd66ff" />
 
 ---
 
@@ -143,6 +145,7 @@ endmodule
 
 
 ### Lab 6: Synthesis of Complete Case Statement
+<img width="1598" height="748" alt="image" src="https://github.com/user-attachments/assets/5abf06ab-a393-4820-ab4f-7892c450f68d" />
 
 ---
 
