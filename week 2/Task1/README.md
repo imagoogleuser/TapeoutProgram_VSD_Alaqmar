@@ -44,7 +44,8 @@ A **System on a Chip (SoC)** is an integrated circuit that combines all major co
 
 The process of designing an SoC is a complex, multi-stage workflow that transforms a high-level concept into a physical chip. It typically involves system-level design, RTL coding, verification, synthesis, and physical layout.
 
-![img_61d89021d8d47 copy](https://github.com/user-attachments/assets/54b5e8f9-f03d-4b53-a535-859360589119)
+<img width="439" height="490" alt="flow2" src="https://github.com/user-attachments/assets/b4acb03d-d725-4c34-8792-4b600b26c5ca" />
+
 
 </details>
 
