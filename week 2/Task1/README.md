@@ -26,7 +26,8 @@ A **System on a Chip (SoC)** is an integrated circuit that combines all major co
 * **Cost-Effectiveness**: Manufacturing a single chip is generally cheaper than producing and assembling multiple individual components.
 * **Increased Reliability**: With fewer separate parts and connections, there are fewer potential points of failure.
 
-![Apple-M1-Architecture-1024x475](https://github.com/user-attachments/assets/a3428bc5-1ddd-4bdc-b3a6-10a74205c8d8)
+<img width="1024" height="1024" alt="unnamed" src="https://github.com/user-attachments/assets/e2a11dbe-cdc5-4f98-b522-fd05b337caf1" />
+
 
 </details>
 
